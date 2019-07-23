@@ -1,21 +1,24 @@
-import React, { Component } from 'react';
-import './App.css';
-import {products, categories} from './data';
+import React, { useState } from "react"
+import "./App.css"
+//components
+import Products from "./Components/Products"
+import Categories from "./Components/Categories"
 
-export default class App extends Component {
-  render() {
-    return (
-      <div className="welcome-message">
-        <h1>
-          Welcome to your blank canvas!
-        </h1>
-        <p>
-          Be sure to inspect and familiarize yourself with what data you will be working with. This is already imported for you from './data.js'.
-        </p>
-        <p>
-          There are {products.length} products and {categories.length} categories.
-        </p>
-      </div>
-    )
-  }
-};
+export default function App() {
+	const [categoryId, setCategoryId] = useState(1)
+	const [categoryName, setCategoryName] = useState("Robots")
+  const [search, setSearch] = useState("")
+  
+	return (
+		<div className='awesomeStore'>
+			<div className='aside'>
+				<Categories currentCategory={categoryId} setCategoryId={setCategoryId} setCategoryName={setCategoryName} />
+			</div>
+			<div>
+				<input type='text' onChange={e => setSearch(e.target.value)} />
+				<h4>{categoryName}</h4>
+				<Products categoryId={categoryId} search={search} />
+			</div>
+		</div>
+	)
+}

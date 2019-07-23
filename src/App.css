@@ -1,9 +1,8 @@
 :root {
   /* Colors */
-  --macNcheese: #F8CB00;
-  --borderColor: #F9DC7F;
+  --darkYellow: #F8CB00;
+  --lightYellow: #F9DC7F;
   --loadingBar: #6269D3;
-  --priceColor: #f8cb00;
   --product_titleColor: #373738;
   --desc_textColor: #585858;
 
@@ -22,9 +21,10 @@
   --spacing-none: 0;
 
   /* Size */
-  --priceSize: 30px;
-  --product_titleSize: 28px;
-  --desc_textSize: 16px;
+  --xLarge: 30px;
+  --large: 28px;
+  --medium: 18px;
+  --small: 16px;
 
 
 }
@@ -39,12 +39,24 @@ body {
 }
 
 .welcome-message {
-  font-size: 18px;
+  font-size: var(--medium);
   text-align: center;
   padding: 0 30px;
 }
 
-/* landing */
+.awesomeStore {
+  display: flex;
+  width: 500px;
+  margin: auto;
+  margin-top: 2rem;
+}
+.aside {
+  margin-right:5rem;
+  margin-top: 2rem;
+}
+
+/* landing products */
+
 .product {
   background: var(--product_background);
   border: var(--product_border);
@@ -61,7 +73,7 @@ body {
 
 
 
-/* details */
+/* details view */
 
 .product_title {
   font-size: var(--product_titleSize);
@@ -73,7 +85,7 @@ body {
 .product_price {
   font-size: var(--priceSize);
   letter-spacing: var(--spacing-none);
-  color: var(--priceColor);
+  color: var(--darkYellow);
   font-weight: var(--bold);
   text-align: left;
 }
