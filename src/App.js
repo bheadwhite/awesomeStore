@@ -4,14 +4,16 @@ import "./App.css"
 import Products from "./Components/Products"
 import Categories from "./Components/Categories"
 import Header from "./Components/Header"
+import Modal from "./Components/Modal"
 
 export default function App() {
-	const [category, setCategory] = useState({id: 1, name: "Robots"})
+	const [category, setCategory] = useState({ id: 1, name: "Robots" })
 	const [search, setSearch] = useState("")
+	const [displayModal, setDisplayModal] = useState({ show: true })
 
 	return (
 		<div className='awesomeStore'>
-			<div className="loadingBar"/>
+			<div className='loadingBar' />
 			<Header search={search} setSearch={setSearch} />
 			<div className='main'>
 				<div className='aside'>
@@ -19,11 +21,12 @@ export default function App() {
 				</div>
 				<div>
 					<h2>{category.name}</h2>
-					<div className="products_wrapper">
-						<Products categoryId={category.id} search={search} />
+					<div className='products_wrapper'>
+						<Products categoryId={category.id} search={search} setDisplayModal={setDisplayModal} />
 					</div>
 				</div>
 			</div>
+			{displayModal.show && <Modal product={displayModal.product} setDisplayModal={setDisplayModal} />}
 		</div>
 	)
 }
