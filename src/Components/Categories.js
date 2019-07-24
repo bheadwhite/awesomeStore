@@ -1,8 +1,7 @@
 import React from "react"
 import { categories as CATEGORIES } from "./../data"
 
-export default function Categories(props) {
-	const { id, setCategory } = props
+export default function Categories({ id, setCategory }) {
 	let categories = CATEGORIES.map(c => {
 		let active = c.id === id ? ' active': ''
 		return (
@@ -11,7 +10,6 @@ export default function Categories(props) {
 			</div>
 		)
 	})
-
 	return (
 		<div>
 			<h4>ALL CATEGORIES</h4>

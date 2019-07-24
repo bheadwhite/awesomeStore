@@ -1,7 +1,6 @@
 import React from "react"
 
 export default function Modal({ product, setDisplayModal }) {
-	console.dir(document.defaultView.scrollY)
 	return product ? (<div className='modal'>
 				<div className='modal_wrapper'>
 					<div className='close'>

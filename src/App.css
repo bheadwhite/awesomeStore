@@ -62,7 +62,10 @@ body {
   background: var(--loadingBar)
 }
 .header {
-  background: var(--darkYellow)
+  background: var(--darkYellow);
+  height: 166px;
+  display: flex;
+  
 }
 .header .wrapper {
   max-width: 1150px;

@@ -1,8 +1,6 @@
 import React from "react"
 
-export default function header(props) {
-	const { search, setSearch } = props
-
+export default function header({search, setSearch}) {
 	return (
 		<div className='header'>
       <div className="wrapper">
