@@ -1,24 +1,21 @@
-import React, { useState, useEffect } from "react"
-import { categories } from "./../data"
+import React from "react"
+import { categories as CATEGORIES } from "./../data"
 
 export default function Categories(props) {
-	const { currentCategory, setCategoryId, setCategoryName } = props
-	const [storeCategories, setStoreCategories] = useState([])
-
-	useEffect(() => {
-		setStoreCategories(() =>
-			categories.map(c => (
-				<div
-					key={c.id}
-					onClick={e => {
-						setCategoryId(c.id)
-						setCategoryName(c.name)
-					}}>
-					{c.name}
-				</div>
-			))
+	const { id, setCategory } = props
+	let categories = CATEGORIES.map(c => {
+		let active = c.id === id ? ' active': ''
+		return (
+			<div key={c.id} className={`category pt${active}`} onClick={() => setCategory(c)}>
+				{c.name}
+			</div>
 		)
-	}, [currentCategory, setCategoryName, setCategoryId])
+	})
 
-	return <div>{storeCategories}</div>
+	return (
+		<div>
+			<h4>ALL CATEGORIES</h4>
+			{categories}
+		</div>
+	)
 }
