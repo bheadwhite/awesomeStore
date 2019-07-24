@@ -9,7 +9,7 @@ import Modal from "./Components/Modal"
 export default function App() {
 	const [category, setCategory] = useState({ id: 1, name: "Robots" })
 	const [search, setSearch] = useState("")
-	const [displayModal, setDisplayModal] = useState({ show: true })
+	const [displayModal, setDisplayModal] = useState({ show: false, product: {}})
 
 	return (
 		<div className='awesomeStore'>
