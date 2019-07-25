@@ -1,10 +1,10 @@
 import React, { useState } from "react"
 import "./App.css"
 //components
-import Products from "./Components/Products"
-import Categories from "./Components/Categories"
-import Header from "./Components/Header"
-import Modal from "./Components/Modal"
+import Products from "./Components/Products/Products"
+import Categories from "./Components/Categories/Categories"
+import Header from "./Components/Header/Header"
+import Modal from "./Components/Modal/Modal"
 
 export default function App() {
 	const [category, setCategory] = useState({ id: 1, name: "Robots" })
@@ -20,7 +20,7 @@ export default function App() {
 					<Categories id={category.id} setCategory={setCategory} />
 				</div>
 				<div>
-					<h2>{category.name}</h2>
+					<p className="products_category">{category.name}</p>
 					<div className='products_wrapper'>
 						<Products categoryId={category.id} search={search} setDisplayModal={setDisplayModal} />
 					</div>

@@ -1,0 +1,49 @@
+@import '../../_var.css';
+/* header */
+.loadingBar {
+  height: 4px;
+  width: 100%;
+  background: var(--loadingBar)
+}
+.header {
+  background: var(--darkYellow);
+  height: 166px;
+  display: flex;
+}
+.header .wrapper {
+  display: flex;
+  width: 1300px;
+  margin: auto;
+  padding: 0 2rem;
+}
+.header h1 {
+  width: 235px;
+  color: #fff;
+  padding-right: 2rem;
+}
+.search {
+  display: flex;
+  align-items: center;
+}
+.search .fa-icon {
+  position: relative;
+  left: 2.5rem;
+  color: #5C5C5C;
+}
+.header input {
+  width: 661px;
+  height: 51px;
+  border-radius: 4px;
+  font-size: 15px;
+  padding-left: 3.5rem;
+  font-family: var(--fontFamily);
+  border: none;
+  line-height: 31px;
+}
+.header input:focus, .header input:active {
+  outline: none;
+}
+.header input::placeholder {
+  font-size: 15px;
+  color: rgba(123,123,123,0.78);
+}

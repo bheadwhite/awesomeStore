@@ -1,0 +1,15 @@
+@import '../../_var.css';
+
+.category {
+  color: var(--lightGrey);
+  font-size: 15px;
+  line-height: 31px;
+}
+.category_title {
+  font-size: 14px;
+  font-weight: var(--semibold);
+  margin-top: 0;
+}
+.category.active {
+  color: var(--darkYellow)
+}

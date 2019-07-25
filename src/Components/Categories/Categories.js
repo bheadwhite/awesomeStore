@@ -1,5 +1,6 @@
 import React from "react"
-import { categories as CATEGORIES } from "./../data"
+import { categories as CATEGORIES } from "../../data"
+import './Categories.css'
 
 export default function Categories({ id, setCategory }) {
 	let categories = CATEGORIES.map(c => {
@@ -12,7 +13,7 @@ export default function Categories({ id, setCategory }) {
 	})
 	return (
 		<div>
-			<h4>ALL CATEGORIES</h4>
+			<p className="category_title">ALL CATEGORIES</p>
 			{categories}
 		</div>
 	)
