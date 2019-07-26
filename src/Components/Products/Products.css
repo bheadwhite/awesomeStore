@@ -19,6 +19,9 @@
   margin-bottom: 30px;
   padding-top: 2rem;
 }
+.product:hover {
+  transform: scale(1.04, 1.04)
+}
 .product .name {
   font-size: var(--medium);
   color: var(--darkGrey);

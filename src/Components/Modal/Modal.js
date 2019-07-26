@@ -9,7 +9,7 @@ export default function Modal({ product, setDisplayModal }) {
 					<div className='close'>
 						<span className='pt' onClick={()=>setDisplayModal(false)}>
               <FontAwesomeIcon icon={faTimes} className="fa-icon" />
-            </span>
+						</span>
 					</div>
 					<div className='product_detail flex'>
 						<div className="left">

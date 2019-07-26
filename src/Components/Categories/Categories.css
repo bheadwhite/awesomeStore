@@ -5,6 +5,10 @@
   font-size: 15px;
   line-height: 31px;
 }
+.category:hover {
+  font-size: 17px;
+  color: var(--darkYellow)
+}
 .category_title {
   font-size: 14px;
   font-weight: var(--semibold);
@@ -12,4 +16,21 @@
 }
 .category.active {
   color: var(--darkYellow)
+}
+.category_title.price {
+  margin-top: 1rem;
+}
+.filterP_container {
+  display: flex;
+}
+.price_filter {
+  border: 1px solid lightgrey;
+  padding: 6px 8px;
+  margin-right: 5px;
+  border-radius: 2px;
+  font-weight: 300;
+  cursor: pointer;
+}
+.price_filter.active {
+  background: var(--darkYellow)
 }
